@@ -144,19 +144,36 @@ body.dark-mode .certificate-card p{
   text-align: left;  
 }
 .animated-text {
-  max-width: 100%;
   display: inline-block;
-  overflow: hidden; /* hide overflowing letters */
   white-space: nowrap;
-  border-right: 2px solid #000; /* cursor effect */
+  overflow: hidden;
   font-family: 'Arial', sans-serif;
   font-size: 2em;
-  animation: typing 7s steps(50) infinite, blink 1s step-end infinite;
+
+  /* typing */
+  animation: typing 7s steps(32) infinite,blink 1s step-end infinite;;
+
+  /* cursor */
+  border-right: 2px solid #000;
+}
+@media (max-width: 768px) {
+  .animated-text {
+    border-right: none;
+  }
+}
+
+
+
+.animated-text::after {
+  content: "|";
+  position: absolute;
+  right:  -6px;   
+  animation: blink 2s step-end infinite;
 }
 
 @keyframes typing {
   0% { width: 0; }
-  50% { width: 100%; }
+  50% { width: 32ch; }
   100% { width: 0; }
 }
 
