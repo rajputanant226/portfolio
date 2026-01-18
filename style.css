@@ -144,6 +144,7 @@ body.dark-mode .certificate-card p{
   text-align: left;  
 }
 .animated-text {
+  max-width: 100%;
   display: inline-block;
   overflow: hidden; /* hide overflowing letters */
   white-space: nowrap;
@@ -155,9 +156,10 @@ body.dark-mode .certificate-card p{
 
 @keyframes typing {
   0% { width: 0; }
-  50% { width: 45%; }
+  50% { width: 100%; }
   100% { width: 0; }
 }
+
 
 @keyframes blink {
   50% { border-color: transparent; }
