@@ -149,13 +149,13 @@ body.dark-mode .certificate-card p{
   overflow: hidden;
   font-family: 'Arial', sans-serif;
   font-size: 2em;
-
-  /* typing */
-  animation: typing 7s steps(32) infinite,blink 1s step-end infinite;;
-
-  /* cursor */
   border-right: 2px solid #000;
+
+  animation:
+    typing 6s steps(32, end) infinite,
+    blink 1s step-end infinite;
 }
+
 @media (max-width: 768px) {
   .animated-text {
     border-right: none;
@@ -172,9 +172,10 @@ body.dark-mode .certificate-card p{
 }
 
 @keyframes typing {
-  0% { width: 0; }
-  50% { width: 32ch; }
-  100% { width: 0; }
+  0%   { width: 0ch; }
+  45%  { width: 32ch; }
+  55%  { width: 32ch; } /* pause at end */
+  100% { width: 0ch; }
 }
 
 
@@ -485,6 +486,11 @@ h2 {
 /* Mobile Devices */
 @media (max-width: 768px) {
 
+  .animated-text {
+    border-right: none;      /* removes cursor */
+    width: auto;             /* prevents inline resizing */
+  }
+  
   /* Navbar */
   .navbar {
     padding: 12px 20px;
