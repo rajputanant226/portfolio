@@ -164,12 +164,6 @@ body.dark-mode .certificate-card p{
 
 
 
-.animated-text::after {
-  content: "|";
-  position: absolute;
-  right:  -6px;   
-  animation: blink 2s step-end infinite;
-}
 
 @keyframes typing {
   0%   { width: 0ch; }
@@ -285,11 +279,10 @@ h2 {
 }
 
 .skill-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-  transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
+
 
 
 /* Education */
@@ -486,10 +479,6 @@ h2 {
 /* Mobile Devices */
 @media (max-width: 768px) {
 
-  .animated-text {
-    border-right: none;      /* removes cursor */
-    width: auto;             /* prevents inline resizing */
-  }
   
   /* Navbar */
   .navbar {
