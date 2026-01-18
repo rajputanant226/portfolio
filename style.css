@@ -276,7 +276,7 @@ h2 {
 
 .skill-card:hover {
   transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 6px 16px@ rgba(0,0,0,0.15);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
 
@@ -475,11 +475,11 @@ h2 {
 /* Mobile Devices */
 @media (max-width: 768px) {
   .animated-text {
-    animation: textBlink 1s infinite;
+    animation: textBlink 1.6s ease-in-out infinite;
     border-right: none;
     width: auto;
-    overflow: visible;
     white-space: normal;
+    overflow: visible;
   }
   @keyframes textBlink {
   0%, 100% { opacity: 1; }
